@@ -71,3 +71,18 @@ angular.module('starter', ['ionic','ngCordova'])
 		
 })
 
+.controller('MyController',function($scope,$http){
+	$scope.items = [1,2,3];
+	$scope.doRefresh = function(){
+		$http.get('/new-items')
+			.success(function(newItems){
+				$scope.items = newItems;
+			})
+			.finally(function(){
+				//停止广播 ion-refresher
+				$scope.$broadcast('scroll.refreshConplete');
+			})
+	}
+	
+})
+
