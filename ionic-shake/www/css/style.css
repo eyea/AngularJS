@@ -1,0 +1,133 @@
+/* Empty. Add your own CSS if you like */
+
+.scroll,.shakebg,.animetebg{
+	width:100%;
+	height: 100%;
+}
+
+.shakebg{
+	background: url(../img/shakeBg.png) ;
+}
+
+.shakebg img,.animetebg .flower{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.shakebg img{
+    top: 5px;
+}
+
+/* 启动动画时的组件 */
+.animetebg{
+	background-color: #1d1d1d;
+}
+
+.animetebg .flower{
+	background: url(../img/flower.png);
+	z-index: 1;
+}
+
+/* 启动动画时的组件 - 上部分 */
+.animetebg .topShakeBox{
+    position: absolute;
+    top: -5px;
+	width:100%;
+	height: 50%;
+	background: url(../img/shakeBg.png);
+	z-index: 2;
+}
+
+.animetebg .topShakeBox .topShake{
+	margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.animetebg .topShakeBox .topBar{
+    position: absolute;
+    bottom: -10px;
+	width:100%;
+	height: 10px;
+	background: url(../img/topBar.png) repeat-x;
+}
+
+/* 启动动画时的组件 - 下部分 */
+.animetebg .bottomShakeBox{
+    position: absolute;
+    bottom: -5px;
+	width:100%;
+	height: 50%;
+	background: url(../img/shakeBg.png);
+	z-index: 2;
+}
+
+.animetebg .bottomShakeBox .bottomBar{
+    position: absolute;
+    top: -10px;
+	width:100%;
+	height: 10px;
+	background: url(../img/bottomBar.png) repeat-x;
+}
+
+.animetebg .bottomShakeBox .bottomShake{
+	margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* 动画部分 */
+
+.animetebg .topShakeBox{
+	-webkit-animation: topShakeBoxAnimete 1s ease-in-out;
+	animation:topShakeBoxAnimete 1s ease-in-out;
+}
+
+.animetebg .bottomShakeBox{
+	-webkit-animation: bottomShakeBoxAnimete 1s ease-in-out;
+	animation:bottomShakeBoxAnimete 1s ease-in-out;
+}
+
+@keyframes topShakeBoxAnimete {
+	0%   {
+		-webkit-transform:translateY(-5px);
+		transform:translateY(-5px);
+	}
+	50%  {
+		-webkit-transform:translateY(-100px);
+		transform:translateY(-100px);
+		}
+	100% {
+		-webkit-transform:translateY(-0px);
+		transform:translateY(-0px);
+	}
+}
+
+@keyframes bottomShakeBoxAnimete {
+	0%   {
+		-webkit-transform:translateY(5px);
+		transform:translateY(5px);
+	}
+	50%  {
+		-webkit-transform:translateY(100px);
+		transform:translateY(100px);
+	}
+	100% {
+		-webkit-transform:translateY(0px);
+		transform:translateY(0px);
+	}
+}
+
+
+
+
+
+

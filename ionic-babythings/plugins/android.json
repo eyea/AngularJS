@@ -1,0 +1,24 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.speedandspeed.babythings"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.speedandspeed.babythings"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.speedandspeed.babythings"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.speedandspeed.babythings"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	<!--ion-tab为tab应用的底部菜单项 
+	title是菜单按钮显示的文字，
+	icon是菜单按钮图标，
+	href是点击菜单的跳转地址，
+	子元素ion-nav-view是点击菜单后子页面显示的位置，
+	ion-nav-view属性name为该tab的名称-->
+	
+		<ion-tabs class="tabs-icon-top tabs-positive">
+		
+		  <ion-tab title="Home" icon="ion-home" href="#/tab/home">
+		    <ion-nav-view name="home-tab"></ion-nav-view>
+		  </ion-tab>
+		  
+		  <ion-tab title="About" icon="ion-ios-information" href="#/tab/about">
+		    <ion-nav-view name="about-tab"></ion-nav-view>
+		  </ion-tab>
+		
+		</ion-tabs>	
+		
+	</body>
+</html>
