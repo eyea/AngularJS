@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<ion-view title='Home' align-title='center' class='bar-positive'>
+			<!--头部-->
+			<ion-header-bar>
+				<h1 class="title title-center">Home!</h1>
+				<div class="buttons">
+					<button class="button">右侧按钮</button>
+				</div>
+			</ion-header-bar>
+			
+			<!--中间内容-->
+			<ion-content>
+				<!--页面内容-->
+				<ion-slide-box>
+					<ion-slide ng-repeat='item in views.slideData track by $index'>
+						<div class="box">
+							<img src="{{item.img}}" alt="" />
+						</div>
+					</ion-slide>
+				</ion-slide-box>
+				
+				<ion-list>
+					<ion-item ng-repeat='item in views.listData track by $index'>
+						<p>姓名： {{item.Name | toUpperCaseText}}</p>
+						<p>城市： {{item.City}}</p>
+					</ion-item>
+				</ion-list>
+				
+			</ion-content>
+			
+			<!--底部-->
+			<ion-footer-bar align-title='center' class='bar-positives'>
+				<h1 class="title title-center">底部</h1>
+			</ion-footer-bar>
+			
+		</ion-view>
+		
+		
+		
+		
+	</body>
+</html>
