@@ -81,6 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
   
+  //固定tab到底部
     $ionicConfigProvider.tabs.position('bottom');
     $ionicConfigProvider.platform.ios.navBar.alignTitle('center');
     $ionicConfigProvider.platform.android.navBar.alignTitle('center')

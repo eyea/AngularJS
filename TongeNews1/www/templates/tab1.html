@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{{title}}</title>
+	</head>
+	<body>
+
+		<ion-view view-title="健康"> 
+			<div class="bar bar-header bar-balanced">
+				<h1 class="title">{{title}}</h1>
+			</div>		
+		
+		  <ion-content class="has-header">
+		  	<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
+		    <ion-slide-box show-pager="false" class="has-header" on-slide-changed="slideChanged($index)">
+		      <ion-slide ng-repeat="slide in slides">
+		        <div class="list">
+		          <a ng-repeat="item in tabs" class="item item-thumbnail-left" href="#"  ng-click="goDetails(item)">
+					<img width="30" height="30" alt="" ng-src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2521903922,123058168&fm=170&s=CE806385CA332E86EA189493030040C3&w=218&h=146&img.JPEG" alt="" />
+		            <h2>title:{{slide.name}}</h2>
+		            <p>description</p>
+		          </a>
+		        </div>
+		        <ion-infinite-scroll ng-if="!hasmore" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+		      </ion-slide>
+		    </ion-slide-box>
+		  </ion-content> 
+		  
+		  <ion-tabs class="tabs-striped tabs-top">
+		    <ion-tab ng-repeat="item in tabs" on-select="selectedTab($index)" title="{{item.name}}"></ion-tab>
+		  </ion-tabs> 
+		  
+		</ion-view>
+
+<!--222222222222222222-->	
+<!--<ion-view view-title="健康">
+	<div class="bar bar-header bar-balanced">
+		<h1 class="title">{{title}}</h1>
+	</div>	
+  <ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)">
+    <ion-slide ng-repeat="slide in slides">
+      <ion-content>
+        <ion-refresher pulling-text="下拉刷新" on-refresh="slide.doRefresh()"></ion-refresher>
+        <div class="list has-header">
+          <a ng-repeat="item in slide.items" class="item item-thumbnail-right item-text-wrap" href="#">
+            <img ng-src="{{imgUrl+item.img}}" width="30" height="30" alt="">
+            <h3>{{item.title}}</h3>
+            <p>{{item.description | substring:item.description}}</p>
+          </a> 
+        </div>
+        <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+        </ion-infinite-scroll>
+      </ion-content>
+    </ion-slide>
+  </ion-slide-box>
+  <ion-tabs class="tabs-striped tabs-top">
+    <ion-tab ng-repeat="item in tabs" on-select="selectedTab($index)" title="{{item.name}}"></ion-tab>
+  </ion-tabs>
+</ion-view>-->
+
+	</body>
+</html>
+<!--<img width="30" height="30" alt="" ng-src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2521903922,123058168&fm=170&s=CE806385CA332E86EA189493030040C3&w=218&h=146&img.JPEG" alt="" />
+
+<ion-view view-title="健康">
+  <ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)">
+    <ion-slide ng-repeat="slide in slides">
+      <ion-content>
+        <ion-refresher pulling-text="下拉刷新" on-refresh="slide.doRefresh()"></ion-refresher>
+        <div class="list has-header">
+          <a ng-repeat="item in slide.items" class="item item-thumbnail-right item-text-wrap" href="#">
+            <img ng-src="{{imgUrl+item.img}}" width="30" height="30" alt="">
+            <h3>{{item.title}}</h3>
+            <p>{{item.description | substring:item.description}}</p>
+          </a> 
+        </div>
+        <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+        </ion-infinite-scroll>
+      </ion-content>
+    </ion-slide>
+  </ion-slide-box>
+  <ion-tabs class="tabs-striped tabs-top">
+    <ion-tab ng-repeat="item in tabs" on-select="selectedTab($index)" title="{{item.name}}"></ion-tab>
+  </ion-tabs>
+</ion-view>-->
