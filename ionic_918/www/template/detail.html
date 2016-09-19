@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<ion-view title='Home'>
+			
+			<!--头部-->
+			<ion-header-bar>
+				<div class="buttons" ng-click='views.goBack()'>
+					<button class="button">返回</button>
+				</div>
+				<h1 class="title title-center">详情页</h1>
+			</ion-header-bar>
+			
+			<!--中间内容-->
+			<ion-content>
+				
+				<ion-item>
+					<p>姓名： {{views.detail.Name}}</p>
+					<p>城市： {{views.detail.City}}</p>
+					<p>国家： {{views.detail.Country}}</p>
+					<p>年龄：{{views.age}}</p>
+				</ion-item>
+				
+				<form action="">
+					<input type="number" class="age"ng-model='views.age' />
+				</form>
+			</ion-content>
+			
+			
+			
+		</ion-view>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{
+	"errno": "C0000",
+  	"errmsg": "success",
+	"data": {
+		"name": "胡晓晖",
+		"phone": "18513622589",
+		"addr": "仰山公园",
+		"canModify": true,
+		"protectedDays": 7
+	}
+}

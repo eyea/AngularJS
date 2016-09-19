@@ -1,0 +1,31 @@
+{ 
+  "errno": "C0000",
+  "errmsg": "success",
+  "data": {
+    "logo": "images/defaultBusinessLogo.png",
+    "logoEditable": true,
+    "name": "沃尔玛",
+    "nameEditable": false,
+    "addr": "仰山公园",
+    "addrEditable": true,
+    "income": "1817.77",
+    "inviteCode": "EFNFED",
+    "settingList": {
+      "reduce": {
+        "show": true,
+        "text": "\u914d\u7f6e\u4f18\u60e0\u91d1\u989d",
+        "img": "images\/businessSetting.png"
+      },
+      "deliver": {
+        "show": true,
+        "text": "\u7533\u8bf7\u5bc4\u9001\u7269\u6599",
+        "img": "images\/businessDeliver.png"
+      },
+      "setting": {
+        "show": true,
+        "text": "\u8bbe\u7f6e",
+        "img": "images\/businessReduce.png"
+      }
+    }
+  }
+}

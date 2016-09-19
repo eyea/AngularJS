@@ -1,0 +1,53 @@
+<ion-view view-title="开通借贷宝支付">
+	<div class="openpay-container">
+		<section class="openpay-business-img">
+			<div class="img-container">
+				<div class="img-logo-already">
+					<img-upload-directive
+			    		limitup-image-num="1"
+			    		img="data.logo || './images/defaultBusinessLogo2.png'"
+			    		on-img-change="changeLogo(img)">
+		    		</img-upload-directive >
+				</div>
+			</div>
+			<p class="business-name">商家LOGO</p>
+		</section>
+
+		<div class="list gradient3">
+			<label class="item item-input gradient">
+				<span class="input-label openpay-form-label">店铺名称</span>
+					<input type="text" placeholder="请输入您的店铺名称"
+						ng-model="data.businessName"
+						ng-change="businessNameChange()" >
+			</label>
+		  	<label class="item item-input">
+		  		<span class="input-label openpay-form-label">店铺地址</span>
+		    	<input type="text" placeholder="请输入您的店铺地址"
+		    		ng-model="data.businessAddr">
+		  </label>
+		</div>
+		<div class="one-px-border"></div>
+		<p class="agreement">
+			<label class="checkbox checkbox-square agreement-checkbox">
+				<input type="checkbox"
+					ng-checked="data.agreementChecked"
+					ng-click="agreementChange()">
+			</label>
+			<span>同意</span>
+			<a ng-click="openAgreement()">《商家服务协议》</a>
+		</p>
+
+		<p class="open-payment-btn">
+			<button class="button button-positive" type="button"
+				ng-disabled="data.disableBtn"
+				ng-click="showConfirm()">
+					{{data.btnContent}}
+				</button>
+			
+		</p>
+
+		<div class="bar bar-footer bar-light bottom-footer">
+			<!-- <p class="title bottom-content">开通服务由九购提供</p> -->
+		</div>
+	</div>
+</ion-view>

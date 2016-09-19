@@ -1,0 +1,58 @@
+<ion-view view-title="我是商家">
+    <ion-content>
+        <ion-refresher
+            pulling-text="下拉刷新..."
+            on-refresh="initPage()"
+            spinner="spiral"
+            >
+        </ion-refresher>
+
+        <div class="index-container">
+            <section class="business-header">
+                <div class="business-info">
+                    <div class="img-container"
+                        ng-click="openUrl('/setting');trackEvent('点击logo');">
+                      <img class="business-logo"
+                        ng-src="{{logo || 'images/defaultBusinessLogo.png'}}"
+                        alt="logo">
+                    </div>
+                    <span class="business-name">{{data.name}}</span>
+                </div>
+
+                <div class="business-gain">
+                    <p class="gain-title">累计收入</p>
+                    <p class="gain-amount">
+                      <span id="gain-money">{{data.income}}</span>元
+                    </p>
+                </div>
+            </section>
+
+            <div class="business-invite gradient">
+                <span>商家邀请码</span>
+                <span id="invite-code"
+                    on-hold="longTouchCopy(data.inviteCode);trackEvent('长按复制邀请码');">
+                    {{data.inviteCode}}
+                </span>
+                <span class="long-touch-btn">（ 长按复制 ）</span>
+            </div> 
+            <div class="one-px-border"></div>
+          
+            <section class="business-menu">
+                <div class="list list-no-padding">
+                <div class="one-px-border2" style="margin-top: 0px;"></div>
+                    <div class="itemBg touchActiveDrictive" ng-repeat="item in data.settingList" >
+                        <a class="item item-icon-left item-icon-right menu-item gradient" 
+                        ng-click="openUrl(item.href);trackEvent(item.text);">
+                            <i class="icon img-container" style="{{'background-image:url('+item.img+')'}}"></i>
+                            <span>{{ item.text }}</span>
+                            <i class="icon img-right-arrow">
+                                <img ng-src="images/rightArrow.png" alt="arrow">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="one-px-border" style="margin-top: -1px;"></div>
+        </div>
+    </ion-content>
+</ion-view>

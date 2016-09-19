@@ -9,7 +9,7 @@
 		<ion-view title='Home' align-title='center' class='bar-positive'>
 			<!--头部-->
 			<ion-header-bar>
-				<h1 class="title title-center">Home!</h1>
+				<h1 class="title title-center">Home</h1>
 				<div class="buttons">
 					<button class="button">右侧按钮</button>
 				</div>
@@ -27,7 +27,7 @@
 				</ion-slide-box>
 				
 				<ion-list>
-					<ion-item ng-repeat='item in views.listData track by $index'>
+					<ion-item ng-repeat='item in views.listData track by $index' ng-click='views.goDetail(item)'>
 						<p>姓名： {{item.Name | toUpperCaseText}}</p>
 						<p>城市： {{item.City}}</p>
 					</ion-item>

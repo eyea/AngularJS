@@ -1,0 +1,11 @@
+{
+	"errno": "C0000",
+  	"errmsg": "success",
+  	"data": {
+  		"canModify": false,
+		"protectedDays": 7,
+		"minMoney": 5,
+		"maxMoney": 20,
+		"activeMoney": 15
+  	}
+}

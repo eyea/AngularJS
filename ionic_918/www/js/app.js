@@ -33,4 +33,12 @@ var app = angular.module('myApp', ['ionic']);
 			templateUrl: 'template/home.html',  // 这个是模板位置
 			controller: 'homeCtrl' //这个是对应模板的controller名称
 		})
+		
+		.state('/detail',{  // 路由名称
+			url: '/detail',  // 这个是url
+			templateUrl: 'template/detail.html',  // 这个是模板位置
+			controller: 'detailCtrl' //这个是对应模板的controller名称
+		})
+		
+		
 })

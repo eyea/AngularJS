@@ -1,0 +1,78 @@
+$middle_font_size: 16px;
+$small_font_size: 12px;
+
+.discount-container {
+	background: #F5F7FA;
+  min-height: 100vh;
+  padding-top: 14px;
+
+	// the setting section on top
+	.gradient{
+	    background: -moz-linear-gradient(top, #e6e6e6 0%,#fff 2%);
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6e6e6), color-stop(2%,#fff));
+	    background: -webkit-linear-gradient(top, #e6e6e6 0%,#fff 2%);
+	    background: -o-linear-gradient(top, #e6e6e6 0%,#fff 2%);
+	    background: -ms-linear-gradient(top, #e6e6e6 0%,#fff 2%);
+	    background: linear-gradient(to bottom, #e6e6e6 0%,#fff 2%);
+	}
+	.one-px-border{
+		width: 100%;
+		height: 2px;
+	    background: -moz-linear-gradient(180deg, #FFFFFF 50%, #e6e6e6 100%);
+	    background: -webkit-gradient(linear, center top, center bottom, color-stop(50%,#FFF), color-stop(100%,#e6e6e6));
+	    background: -webkit-linear-gradient(180deg, #FFFFFF 50%, #e6e6e6 100%);
+	    background: -o-linear-gradient(180deg, #FFFFFF 50%, #e6e6e6 100%);
+	    background: -ms-linear-gradient(180deg, #FFFFFF 50%, #e6e6e6 100%);
+	    background: linear-gradient(180deg, #FFFFFF 50%, #e6e6e6 100%);
+	}
+	.setting-section.item.item-icon-right {
+		font-size: $middle_font_size;
+		padding: 0 0 0 15px;
+		height: 52px;
+		border:none;
+		line-height: 52px;
+		span {
+			line-height: 50px;
+		}
+		.icon {
+			width: 50%;
+			justify-content: flex-end;
+			font-size: $middle_font_size;
+			img {
+				width: 7px;
+				margin-left: 8px;
+			}
+		}
+	}
+
+	// diacount description
+	.discount-description {
+		margin: 8px 0 0 0;
+		font-size: $small_font_size;
+		padding: 0 15px;
+		p {
+			color: #b1b1b3;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+
+	// the big button
+	.submit-discount-btn {
+		padding-top: 25px;
+		text-align: center;
+		button {
+			width: 92%;
+			border-radius:2px;
+		}
+	}	
+
+	.hidden {
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	}
+}
