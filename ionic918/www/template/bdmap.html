@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<ion-view title='bdmap'>
+			
+			<!--头部-->
+			<ion-header-bar>
+				<div class="buttons" ng-click='views.goBack()'>
+					<button class="button">返回</button>
+				</div>
+				<h1 class="title title-center">百度定位</h1>
+			</ion-header-bar>
+			
+			<!--中间内容-->
+			<ion-content class='padding'>
+				
+				   <button class="button button-block button-positive icon-left "
+				            ng-click="views.getLocation()">
+				      获取地理定位
+				   </button>
+				
+				
+				   <p>定位数据</p>
+				   {{data}}
+				   <p>数据2</p>
+				   {{team}}
+				   
+				    <div id="allmap"></div>
+							
+								
+				
+			</ion-content>
+			
+			
+			
+		</ion-view>
+
+	</body>
+</html>

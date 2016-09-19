@@ -3,3 +3,9 @@ img{
 	width: 100%;
 	height: 100px;
 }
+
+#allmap{
+	height: 300px;
+	width: 300px;
+	margin: 0 auto;
+}

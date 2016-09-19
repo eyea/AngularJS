@@ -37,6 +37,12 @@
 //					console.log(item);
 					$state.go('/detail'); // 跳转detail 路由
 					myFactory.storage.setVal('detail',item);  // 保存数据
+				},
+			
+			// 跳转百度地图页面
+				getLocation: function(){
+					$state.go('/bdmap');  // 跳转bdmap路由
+					
 				}
 				
 				

@@ -7,15 +7,11 @@
 			
 			factory.getList = function(){
 				
-//				$http.get("http://www.runoob.com/try/angularjs/data/Customers_JSON.php")
-//					.success(function(response){
-//						console.log(response);
-//					});
 				return $http.get("http://www.runoob.com/try/angularjs/data/Customers_JSON.php")
 					
 			};
 			
-			// 不同页面间的数据传输
+			// 不同页面间的数据传输 （主页列表和详情页之间）
 			factory.storage = {  // 编写factory上的storage方法
 				
 				//设置值
@@ -40,9 +36,14 @@
 					}
 				}
 				
-			}
+			};
 			
 			return factory;
+			
+			//  百度地图
+			
+			
+			
 			
 		}])
 })(app)

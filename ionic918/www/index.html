@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--<meta http-equiv="Content-Security-Policy"
+    content="script-src * 'unsafe-eval'; connect-src * 'unsafe-eval'; 
+object-src 'self'; style-src * 'unsafe-inline'; img-src *" >-->
+
     <title></title>
 
     <link rel="manifest" href="manifest.json">
@@ -35,6 +39,8 @@
     <script src="js/filter.js"></script>
     <script src="js/controller/homeCtrl.js"></script>
     <script src="js/controller/detailCtrl.js"></script>
+    <script src="js/controller/bdmapCtrl.js"></script>
+    <script src="http://api.map.baidu.com/api?type=quick&ak=VHfkkXsxZinaiRNCwiOXDniesFrl2Q0X&v=1.0"></script> 
   </head>
   <body ng-app="myApp">
 	
