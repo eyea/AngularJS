@@ -3,11 +3,12 @@ img{
 	width: 100%;
 	height: 100px;
 }
-body,html{
-	height: 10000px;
-}
+
 #allmap{
 	height: 300px;
 	width: 100%;
 	margin: 0 auto;
 }
+body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+#allmap{width:100%;height:500px;}
+#r-result{width:100%;margin-top:5px;}
