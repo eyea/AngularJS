@@ -21,11 +21,16 @@
 				<ion-slide-box>
 					<ion-slide ng-repeat='item in views.slideData track by $index'>
 						<div class="box">
-							<img src="{{item.img}}" alt="" />
+							<img ng-src="{{item.img}}" alt="" />
 						</div>
 					</ion-slide>
 				</ion-slide-box>
 				
+				<!--下拉刷新-->
+				  <ion-refresher pulling-text="下拉刷新..." on-refresh="views.doRefresh()" refreshing-text="刷新成功！">
+				  </ion-refresher>	
+				  
+				 <!--列表-->
 				<ion-list>
 					<ion-item ng-repeat='item in views.listData track by $index' ng-click='views.goDetail(item)'>
 						<p>姓名： {{item.Name | toUpperCaseText}}</p>
