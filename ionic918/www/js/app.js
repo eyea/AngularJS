@@ -46,5 +46,11 @@ var app = angular.module('myApp', ['ionic']);
 			controller: 'bdmapCtrl' //这个是对应模板的controller名称
 		})
 		
+		.state('/aMap',{
+			url: '/aMap',
+			templateUrl: 'template/aMap.html',
+			controller: 'aMapCtrl'
+		})
+		
 		
 })

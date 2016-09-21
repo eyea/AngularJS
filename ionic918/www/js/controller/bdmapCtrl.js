@@ -1,6 +1,6 @@
 (function(app){
 	app
-		.controller('bdmapCtrl',['$scope','$rootScope',function($scope,$rootScope){
+		.controller('bdmapCtrl',['$scope','$state',function($scope,$state){
 			
 			$scope.views = {
 				
@@ -22,7 +22,7 @@
 					});
 					console.log(ac);
 					ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
-						console.log(909090+ac.cj);
+						console.log("监听出来了");
 						var str = "";
 					    var _value = e.fromitem.value;
 					    var value = "";
@@ -39,26 +39,28 @@
 					    str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
 					    G("searchResultPanel").innerHTML = str;
 					});
+					
 					console.log(123444);
+					
 					var myValue;
-					console.log(12355);
+					
 					ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
-					console.log(123466666666644);
+					
 					var _value = e.item.value;
 					    myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
 					    G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
 					    
 					    setPlace();
 					});
-					console.log(12344444444444444444444);
+					
 					function setPlace(){// 创建地址解析器实例
-					var myGeo = new BMap.Geocoder();// 将地址解析结果显示在地图上,并调整地图视野
-					myGeo.getPoint(myValue, function(point){
-					  if (point) {
-					    map.centerAndZoom(point, 16);
-					    map.addOverlay(new BMap.Marker(point));
-					  }
-					}, "北京");
+						var myGeo = new BMap.Geocoder();// 将地址解析结果显示在地图上,并调整地图视野
+						myGeo.getPoint(myValue, function(point){
+						  if (point) {
+						    map.centerAndZoom(point, 16);
+						    map.addOverlay(new BMap.Marker(point));
+						  }
+						}, "北京");
 					}
 
 
@@ -225,6 +227,10 @@
 				
 				goBack: function(){
 					window.history.back();
+				},
+				
+				goAmap: function(){
+					$state.go('/aMap'); //跳转到高德地图
 				}
 				
 				
@@ -232,7 +238,10 @@
 				
 			};
 			
-			$scope.views.getLocation();
+//			$scope.views.getLocation();
+//			setInterval(function(){
+				$scope.views.getLocation();
+//			},5000);
 			
 		}])
 })(app);
