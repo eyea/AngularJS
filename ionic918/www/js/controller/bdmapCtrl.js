@@ -238,10 +238,8 @@
 				
 			};
 			
-//			$scope.views.getLocation();
-//			setInterval(function(){
-				$scope.views.getLocation();
-//			},5000);
+			$scope.views.getLocation();
+
 			
 		}])
 })(app);
