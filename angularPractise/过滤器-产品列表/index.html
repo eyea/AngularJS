@@ -24,14 +24,15 @@
 			<table class="table">
 				<thead>
 					 <tr>
-					 	<th>产品编号</th>
-					 	<th>产品名称</th>
-					 	<th>产品价格</th>
+					 	<th ng-click='changeOrder()' ng-class='{dropup: order ===""}'>产品编号<span class="caret"></span></th>
+					 	<th ng-click='changeOrder()' ng-class='{dropup: order ===""}'>产品名称<span class="caret"></span></th>
+					 	<th ng-click='changeOrder()' ng-class='{dropup: order ===""}'>产品价格<span class="caret"></span></th>
 					 </tr>
 				</thead>
 				
 				<tbody>
-					<tr ng-repeat='item  in data | filter:search '>
+					<tr ng-repeat='item  in data | filter:search | orderBy:order + orderType '>  <!--是对所有的list进行搜索--> 
+					<!--<tr ng-repeat='item in data | filter:{id:search}'>   这是对id进行搜索  或者对ngmodel 的search.id-->   
 						<td>{{item.id}}</td>
 						<td>{{item.name}}</td>
 						<td>{{item.price | currency:"(RMB) "}}</td>

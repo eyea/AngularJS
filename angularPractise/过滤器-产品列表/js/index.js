@@ -40,6 +40,16 @@ myApp
 		
 		$scope.data = productData;
 		
+		$scope.orderType = 'id';
+
+		$scope.order = '-';
 		
+		$scope.changeOrder = function(){
+			if($scope.order !== ""){
+				$scope.order = "";
+			}else{
+				$scope.order = '-';
+			}
+		}
 		
 	}])
