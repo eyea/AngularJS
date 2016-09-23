@@ -4,6 +4,11 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" href="../verdor/angular/bootstrap.css" />
+		<style>
+			.orderColor{
+				color: red;
+			}
+		</style>
 	</head>
 	<body ng-app='product'>
 		<nav class="navbar navbar-default" role="navigation">
@@ -24,9 +29,9 @@
 			<table class="table">
 				<thead>
 					 <tr>
-					 	<th ng-click='changeOrder()' ng-class='{dropup: order ===""}'>产品编号<span class="caret"></span></th>
-					 	<th ng-click='changeOrder()' ng-class='{dropup: order ===""}'>产品名称<span class="caret"></span></th>
-					 	<th ng-click='changeOrder()' ng-class='{dropup: order ===""}'>产品价格<span class="caret"></span></th>
+					 	<th ng-click='changeOrder("id")' ng-class='{dropup: order ===""}'>产品编号<span ng-class="{orderColor: orderType==='id'}"  class="caret"></span></th>
+					 	<th ng-click='changeOrder("name")' ng-class='{dropup: order ===""}'>产品名称<span ng-class="{orderColor: orderType==='name'}" class="caret"></span></th>
+					 	<th ng-click='changeOrder("price")' ng-class='{dropup: order ===""}'>产品价格<span ng-class="{orderColor: orderType==='price'}" class="caret"></span></th>
 					 </tr>
 				</thead>
 				

@@ -44,7 +44,10 @@ myApp
 
 		$scope.order = '-';
 		
-		$scope.changeOrder = function(){
+		$scope.changeOrder = function(id){
+			
+			$scope.orderType = id;
+			
 			if($scope.order !== ""){
 				$scope.order = "";
 			}else{
