@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../verdor/angular/bootstrap.css" />
+	</head>
+	<body ng-app='myApp'>
+		
+		<div class="container" ng-controller='firstCtrl'>
+<div ng-show="">
+			<h1>数字</h1>
+			<p>{{12345666 | number}}</p>
+			<p>{{12345666 | number:3 }}</p>
+			<h1>货币</h1>
+			<p>
+				{{13342325 | currency }}
+			</p>
+			<p>
+				{{787878787 | currency:"RMB "}}
+			</p>
+			<h1>日期</h1>
+			<p>
+				{{today | date:'medium' }}
+			</p>
+			<p>
+				{{today | date:'mediumTime' }}
+			</p>
+			<h1>字符串</h1>
+			<p>{{data.message | uppercase}}</p>
+			<p>{{Data.iofomessage}}-->{{Data.iofomessage | uppercase}}</p>
+			<p>{{Data.city | filter:{py:"s"} }}</p>
+			<h1>orderBy</h1>
+			<p> 正序a-z{{Data.city | orderBy:"py" }}</p>
+			<p> 反序z-a{{Data.city | orderBy:"-py" }}</p>	
+</div>
+			<h1>函数filter  checkName 而不是 checkName()</h1>
+			<p>
+				{{Data.city | filter:checkName }}
+			</p>
+			
+			
+		
+		</div>
+	</body>
+	
+	<script src="../verdor/angular/angular.js"></script>
+	<script src="js/index.js"></script>
+</html>

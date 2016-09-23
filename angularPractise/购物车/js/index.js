@@ -1,3 +1,14 @@
+//angular.module('myApp',['$provide'])
+//
+//.$provide.provider('customService',function($scope){
+//	// 自定义服务
+//	$scope.get = function(){
+//		return{
+//			message: 'customService Message'
+//		}
+//	}
+//})
+
 angular.module('myApp',[])
 
 .controller('cartCtrl',['$scope',function($scope){

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../verdor/angular/bootstrap.css" />
+	</head>
+	<body ng-app='myApp' style="margin:50px">
+		
+		<div ng-controller='firstCtrl'>
+			<input type="text" ng-model='data.name' />
+			<p>
+				firstCtrl: {{data.name}}
+			</p>
+		</div>
+		
+		<div ng-controller='secondCtrl'>
+			<p>
+				secondCtrl: {{data.message}}
+			</p>
+		</div>
+	</body>
+	
+	<script src="../verdor/angular/angular.js"></script>
+	<script src="js/index.js"></script>
+</html>

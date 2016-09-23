@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../verdor/angular/bootstrap.css" />
+	</head>
+	<body ng-app='product'>
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	
+		      <form class="navbar-form navbar-left" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search" ng-model='search'>
+		        </div>
+		      </form>
+		
+		    </div>
+		  </div>
+		</nav>
+		
+		<div class="container" ng-controller='productCtrl'>
+			<table class="table">
+				<thead>
+					 <tr>
+					 	<th>产品编号</th>
+					 	<th>产品名称</th>
+					 	<th>产品价格</th>
+					 </tr>
+				</thead>
+				
+				<tbody>
+					<tr ng-repeat='item  in data | filter:search '>
+						<td>{{item.id}}</td>
+						<td>{{item.name}}</td>
+						<td>{{item.price | currency:"(RMB) "}}</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		
+		</div>
+	</body>
+	
+	<script src="../verdor/angular/angular.js"></script>
+	<script src="js/index.js"></script>
+</html>
