@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../verdor/angular/bootstrap.css" />
+	</head>
+	<body ng-app='myApp'>
+		
+		<div class="container" ng-controller='firstCtrl'>
+			<ul>
+				<li ng-repeat='item in data | filterAge'>
+					{{item.name}}今年{{item.age}},现在居住地是{{item.city}} <br /><br />
+				</li>
+			</ul>
+			
+		</div>
+	</body>
+	
+	<script src="../verdor/angular/angular.js"></script>
+	<script src="js/index.js"></script>
+</html>

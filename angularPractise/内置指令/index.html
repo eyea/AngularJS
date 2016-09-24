@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../verdor/angular/bootstrap.css" />
+		<style type="text/css">
+			.red{
+				color:red;
+			}
+		</style>
+	</head>
+	<body ng-app='myApp'>
+		
+		<div class="container" ng-controller='firstCtrl'>
+			<ul style='display:none'>
+				<li ng-repeat='item in data | filterAge'>
+					{{item.name}}今年{{item.age}},现在居住地是{{item.city}} <br /><br />
+				</li>
+			</ul>
+			<!--内置指令的例子-->
+			<div ng-bind='1+1'>
+				
+			</div>
+			<!--注意下面的include 里面接受字符串的！-->
+			<!--class 有筛选条件的话 是个{}格式的-->
+			<div ng-include='"other.html"' ng-class='{red:status}'></div>   
+			
+			<button ng-click='changeStatus($event)'>点击我切换下面的真假值</button>
+			<p style="font-size:20px;color: red;">{{status}}</p>
+			
+			<!--ng-switch -->
+			<ul ng-switch on='status'>
+				<li ng-switch-when='true'>
+					true
+				</li>
+				<li ng-switch-when='false'>
+					false
+				</li>
+			</ul>
+			
+			<div ng-if='status'>
+				status show ng-if
+			</div>
+				
+			
+			
+			
+			
+			
+			
+		</div>
+	</body>
+	
+	<script src="../verdor/angular/angular.js"></script>
+	<script src="js/index.js"></script>
+</html>
