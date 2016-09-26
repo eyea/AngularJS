@@ -83,6 +83,48 @@
 			    	</div>
 			    </div>
 			  </div>
+
+
+				<!--年龄-->
+				<div class="form-group" ng-class='{"has-error":myForm.age.$dirty && myForm.age.$invalid}'>
+					<label class='col-sm-2'>年龄</label>
+					<div class="col-sm-10">
+						<input type="number" autocomplete="off" name="age" ng-required='true' min="10" max="99" ng-minlength='2' ng-maxlength='2' ng-model='data.age' class="form-control" placeholder="请输入年龄">
+
+						<div ng-show='myForm.age.$error.maxlength' class="alert alert-danger help-block">
+							年龄不能超过99岁
+						</div>
+						<div ng-show='myForm.age.$error.minlength' class="alert alert-danger help-block">
+							年龄不能小于10岁
+						</div>
+					</div>
+				</div>
+				<!--性别-->
+				<div class="form-group">
+					<label class='col-sm-2'>性别</label>
+					<div class="col-sm-10">
+						<label class="radio-inline">
+							<input type="radio" name="sex" ng-model="data.sex" value="1">男
+						</label>
+						<label class="radio-inline" for="">
+							<input type="radio" name="sex" ng-model="data.sex" value="0">女
+						</label>
+					</div>
+				</div>
+
+				<!--爱好-->
+				<div class="form-group">
+					<label class='col-sm-2'>爱好</label>
+					<div class="col-sm-10">
+						<label class="checkbox-inline" ng-repeat="item in hobbies">
+							<input type="checkbox"  value="{{item.id}}">
+							{{item.name}}
+						</label>
+					</div>
+				</div>
+
+
+
 			  
 			  
 			  
