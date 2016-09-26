@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>指令2</title>
+    <link rel="stylesheet" href="../verdor/angular/bootstrap.css" />
+</head>
+<body ng-app='myApp'>
+    <form action="" name="myForm" ng-submit="save()" ng-controller="testCtrl">
+        <input type="text" name="userName" ng-model="userName" required>
+        <input type="password" name="password" ng-model="userPassword" required>
+        <input type="submit" ng-disabled="myForm.$invalid">
+    </form>
+
+
+</body>
+
+<script src="../verdor/angular/angular.js"></script>
+<script src="js/表单.js"></script>
+</html>
