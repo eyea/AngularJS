@@ -22,6 +22,39 @@
         <loader id="loader" howToLoad="loadData()">滑动加载</loader>
     </div>
 
+    <!--多个指令之间的练习-->
+    <div ng-controller="secondCtrl">
+
+        <!--<superman flavor="{{abc}}">-->
+
+        <!--</superman>-->
+
+        <!--控制和指令之间的双向数据绑定-->
+        CTRL: <br><br>
+        <input type="text" ng-model="abc"><br><br>
+        DIRECTIVE: <br><br>
+        <superman flavor="abc">
+        </superman>
+        <!---->
+        <!--<div class="row">-->
+            <!--<div class="col-md-3">-->
+                <!--<superman strength>动感超人1&#45;&#45;力量！</superman>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<p></p>-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-3">-->
+                <!--<superman strength speed>动感超人2&#45;&#45;力量+速度！</superman>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<p></p>-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-3">-->
+                <!--<superman strength speed light>动感超人3&#45;&#45;力量+速度+射线！</superman>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
 
 </body>
 

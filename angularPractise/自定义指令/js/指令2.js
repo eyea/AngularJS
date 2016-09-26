@@ -22,3 +22,24 @@ angular.module('myApp',[])
 
     }
 })
+//上面是第一个部分的练习
+.controller('secondCtrl',['$scope',function ($scope) {
+    $scope.abc = 'USA'
+}])
+
+.directive('superman',function () {
+    return{
+        restrict:'AE',
+//继承scope里的属性
+        // scope:{
+        //     flavor:'@'
+        // },
+        // template:'<div>{{flavor}}</div>'
+
+//    控制器和指令双向数据绑定
+        scope:{
+            flavor:'='
+        },
+        template:'<input type="text" ng-model="flavor"/>'
+    }
+})
