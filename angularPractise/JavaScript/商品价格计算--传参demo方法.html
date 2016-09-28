@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传参要点示例</title>
+    <style>
+        li{
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        input{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="list">
+    <li>
+        <input class="reduce" type="button" value="-">
+        <strong>0</strong>
+        <input class="add" type="button" value="+">
+        单价：<em>12.5元</em>
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input class="reduce" type="button" value="-">
+        <strong>0</strong>
+        <input class="add" type="button" value="+">
+        单价：<em>10元</em>
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input class="reduce" type="button" value="-">
+        <strong>0</strong>
+        <input class="add" type="button" value="+">
+        单价：<em>25元</em>
+        小计：<span>0元</span>
+    </li>
+</ul>
+
+
+<script>
+    window.onload = function () {
+        var oUl = document.getElementById('list');
+        var oLi = oUl.getElementsByTagName('li');
+        var oReduce = document.getElementsByClassName('reduce');
+        var oAdd = document.getElementsByClassName('add');
+
+        // 数据处理
+
+
+    }
+</script>
+
+
+</body>
+</html>

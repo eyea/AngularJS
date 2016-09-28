@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体大小</title>
+    <style>
+        body{
+            margin:0 auto;
+        }
+
+        #div{
+            width:300px;
+            height:200px;
+            margin:20px auto;
+            font-size: 14px;
+        }
+        #div2{
+            width:90px;
+            margin:0 auto;
+        }
+
+        .aut{
+            background-color: yellow;
+            border:10px solid red;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="div">
+    为您推荐：div 水平居中div居中之div水平居中bootstrap div居中
+    css-元素水平、竖直居中 - fanhaiwang520的专栏 - 博客频道 - ...
+    2013年3月16日 - (1)用table帮助实现不确定宽度块级元素居中素
+    blog.csdn.net/fanhaiwa...  - 百度快照 - 1546条评价
+
+</div>
+
+<div id="div2">
+    <button id="reduce">-</button>
+    <button id="add">+</button>
+    <button id="sun">冬日暖阳</button>
+</div>
+
+<script>
+    window.onload = function () {
+
+        var oDiv = document.getElementById('div');
+        var oReduce = document.getElementById('reduce');
+        var oAdd = document.getElementById('add');
+        var oAut = document.getElementById('sun');
+        var num = 14;
+
+        oReduce.onclick = function () {
+            if(num >= 12){
+                num -- ;
+                oDiv.style.fontSize = num + 'px';
+            }else{
+                alert('当前字体已经最小了');
+            }
+        };
+
+        oAdd.onclick = function () {
+            if(num <=20){
+                num ++;
+                oDiv.style.fontSize = num + 'px';
+            }else{
+                alert('当前字体已经最大了');
+            }
+        };
+
+        oAut.onclick = function () {
+            oDiv.className = 'aut';
+        }
+
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

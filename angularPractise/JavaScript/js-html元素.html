@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #pTitle{
+            display: inline-block;
+            text-align: left;
+        }
+        #title{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+<input id="input" type="text" value="城市">
+<select id="select">
+    <option value="北京">北京</option>
+    <option value="上海">上海</option>
+    <option value="南京">南京</option>
+</select>
+<button id="btn">改变input值</button>
+<!--css-->
+<h2>单行文字居中 ，多行文字居左,超出两行省略...</h2>
+<p id="pTitle">
+    <h2 id="title">标题单行文字居中 </h2>
+</p>
+
+<script>
+    var oInput = document.getElementById('input');
+    var oSelect = document.getElementById('select');
+    var oB = document.getElementById('btn');
+
+    oB.onclick = function () {
+        oInput.value = oSelect.value;
+    }
+</script>
+
+
+</body>
+</html>

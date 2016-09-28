@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            background-color: #eee;
+            cursor: pointer;
+            border-radius:4px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="button" value="0">
+<input type="button" value="0">
+<input type="button" value="0">
+
+<script>
+window.onload = function () {
+    var oBtn = document.getElementsByTagName('input');
+
+    var arrText = ['A','B','C','D'];
+
+    for(var i=0,len=oBtn.length;i<len;i++){
+        oBtn[i].num = 0;
+        oBtn[i].onclick = function () {
+            if(this.num < arrText.length){
+                this.value = arrText[this.num];
+                this.num ++ ;
+                console.log(this.num);
+            }
+            if(this.num == arrText.length){
+                this.num = 0;
+            }
+        }
+    }
+}
+
+
+
+</script>
+</body>
+</html>

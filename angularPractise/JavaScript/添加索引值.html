@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加索引值</title>
+</head>
+<body>
+<input type="button" value="0">
+<input type="button" value="0">
+<input type="button" value="0">
+
+<p>段落一</p>
+<p>段落二</p>
+<p>段落三</p>
+
+<script>
+
+//    考虑自定义属性  给一组要操作的对象新加自定义属性
+    window.onload = function () {
+        var aBtn = document.getElementsByTagName('input');
+        var aP = document.getElementsByTagName('p');
+        var that = null;
+        var arrText = ['张三','李四','王五'];
+
+
+        for(var i=0,len=aBtn.length;i<len;i++){
+            //alert(i); // 0  1 2
+            aBtn[i].index = i;
+//            alert(aBtn[i].index);  0  1  2
+            aBtn[i].onclick = function () {
+                //alert(i);// 3
+//                alert(this.index)
+                aBtn[this.index].value = arrText[this.index];
+                aP[this.index].innerHTML = arrText[this.index]
+;            }
+        }
+
+    }
+</script>
+</body>
+</html>

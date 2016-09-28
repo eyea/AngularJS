@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<input id="input" type="text" value="">
+<select id="select">
+    <option value="北京">北京</option>
+    <option value="上海">上海</option>
+</select>
+<button id="btn">按钮</button>
+
+<script>
+    var oInput = document.getElementById('input');
+    var oSelect = document.getElementById('select');
+    var oB = document.getElementById('btn');
+
+    oB.onclick = function () {
+        alert(oInput.value+'在'+oSelect.value);
+    }
+</script>
+
+
+</body>
+</html>

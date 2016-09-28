@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片</title>
+    <style>
+        #container{
+            width:200px;
+            height:200px;
+            overflow-y: hidden;
+            position: relative;
+            margin: 0 auto;
+            border:1px solid grey;
+        }
+        #picContainer{
+            height:200px;
+        }
+        .picSeries{
+            float: left;
+            width:200px;
+            height:200px;
+            display: block;
+        }
+        span{
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            text-align: center;
+            background-color: #5e5e5e;
+            color: white;
+            position: absolute;
+            top:90px;
+        }
+        #aLeft{
+            left:5px;
+        }
+        #aRight{
+            right:5px;
+        }
+        #span,#text{
+            position: absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            width: 200px;
+            background-color: #000000;
+            opacity: .5;
+            text-align: center;
+            height:20px;
+            color: white;
+        }
+        #text{
+            top:0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div id="picContainer">
+        <img src="" alt="" id="img" class="picSeries">
+    </div>
+    <a href="javascript:void(0)" id="aLeft">
+        <
+    </a>
+    <a href="javascript:void(0)" id="aRight">
+        >
+    </a>
+    <div id="span">
+        <span id="number">
+            正在加载中...
+        </span>
+    </div>
+    <div id="text">
+        正在加载中....
+    </div>
+</div>
+
+
+<script>
+    window.onload = function () {
+        var oLeft = document.getElementById('aLeft');
+        var oRight = document.getElementById('aRight');
+        var oPicCon = document.getElementById('picContainer');
+        var oImg = document.getElementById('img');
+        var oText = document.getElementById('text');
+        var oNum = document.getElementById('number');
+
+        var imgArr = ['1.jpg','2.jpg','3.jpg'];
+        var imgText = ['图片1介绍','图片2介绍','图片3介绍'];
+        var num = 0;
+
+
+//        初始化
+        var init = function () {
+            oImg.src = imgArr[num];
+            oText.innerHTML = imgText[num];
+            oNum.innerHTML = num + 1 + '/' + imgArr.length;
+        };
+
+        init();
+
+        oLeft.onclick = function () {
+            num --;
+            if(num == -1){
+                num = imgArr.length - 1;
+            }
+            init();
+        };
+
+        oRight.onclick = function () {
+            num ++;
+            if(num == imgArr.length){
+                num = 0;
+                console.log('imgArr.length-->'+imgArr.length);
+            }
+            init();
+        }
+    }
+</script>
+
+
+</body>
+</html>

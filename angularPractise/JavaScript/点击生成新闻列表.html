@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击生成新闻列表</title>
+    <style>
+        #div{
+            width:400px;
+            background-color: #cccccc;
+            color: #000;
+        }
+        #btn{
+            width:100px;
+            height:20px;
+            margin:0 auto;
+            line-height:20px;
+            margin-top: 20px;
+        }
+        li{
+            height:20px;
+            line-height:20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">获取新闻列表</button>
+
+    <div id="div">
+        <ul id="ul">
+
+        </ul>
+    </div>
+
+</body>
+<script>
+    var oDiv = document.getElementById('div');
+    var oUl = document.getElementById('ul');
+    var oBtn = document.getElementById('btn');
+
+    var newsList = [
+        '宁夏石嘴山煤矿爆炸已致19人遇难 初步原因公布',
+        '驾考新规10月1日起实施 科目二和科目三可一起考',
+        '网购7日无理由退货征民意:拆封商品也可退货',
+        '韩媒：朝鲜遭遇严重干旱 粮食缺口近70万吨',
+        '76岁牟其中出狱:喜欢高谈阔论 狱中分析新闻联播'
+    ];
+
+    oBtn.onclick = function () {
+        var str = '';
+        clearTimeout();
+        setTimeout(function () {
+            for(var i=0,len = newsList.length;i<len;i++){
+                str += '<li>' + newsList[i] + '</li>';
+            };
+            oUl.innerHTML += str;
+        },1000);
+    }
+
+
+
+</script>
+</html>

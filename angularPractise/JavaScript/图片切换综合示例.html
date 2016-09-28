@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换综合示例</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        #div{
+            background-color: #7e7e80;
+        }
+        #imgContainer{
+            width:200px;
+            height:200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        #imgText{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            width:200px;
+            height:20px;
+            line-height:20px;
+            background-color: #4a87ee;
+            opacity:.8;
+            color: red;
+        }
+        #img{
+            width:200px;
+            height:200px;
+            display: block;
+        }
+        #imgTotal{
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: #4a87ee;
+            opacity:.8;
+            color: red;
+        }
+        #imgAside{
+            width:20px;
+            position: absolute;
+            right:-25px;
+            top:0;
+            cursor: pointer;
+        }
+        .imgChange{
+            display: block;
+            margin-bottom: 2px;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            border:1px solid;
+            color: white;
+        }
+        .highLight{
+            display: block;
+            margin-bottom: 2px;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            border:1px solid;
+            color: green;
+            background-color: #4a87ee;
+        }
+        #left,#right{
+            display: block;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            border:1px solid white;
+            position: absolute;
+            top:90px;
+            color: #cccccc;
+            cursor: pointer;
+        }
+        #left{
+            left:2px;
+        }
+        #right{
+            right:2px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div">
+    <div id="imgContainer">
+        <span id="left"><</span>
+        <span id="right">></span>
+
+        <p id="imgText">
+            正在加载中...
+        </p>
+
+        <img id="img" src="" alt="图片">
+
+        <p id="imgTotal">
+            统计中...
+        </p>
+
+        <div id="imgAside">
+            <span class="imgChange">1</span>
+            <span class="imgChange">2</span>
+            <span class="imgChange">3</span>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var oLeft = document.getElementById('left');
+    var oRight = document.getElementById('right');
+    var oText = document.getElementById('imgText');
+    var oTotal = document.getElementById('imgTotal');
+    var oImg = document.getElementById('img');
+    var aSide = document.getElementsByClassName('imgChange');
+
+
+    var arrText = ['美女','风景','动画'];
+    var arrImg = ['1.jpg','2.jpg','3.jpg'];
+
+    var num = 0 ;
+
+    // 初始化
+    function init() {
+        oImg.src = arrImg[num];
+        oText.innerHTML = arrText[num];
+        oTotal.innerHTML = num+1 + '/' + arrText.length;
+    };
+
+    init();
+
+    //点击切换
+    oLeft.onclick = function () {
+        if(num == 0){
+            num = arrImg.length;
+        }
+        num -- ;
+        init();
+    };
+
+    oRight.onclick = function () {
+        if(num == arrImg.length-1){
+            num = -1;
+        }
+        num ++ ;
+        init();
+    };
+
+    for(var i=0,len=arrImg.length;i<len;i++){
+ //    获取自定义属性的index
+        var that = null;
+        aSide[i].index = i;
+        aSide[i].onclick = function () {
+            var that = this.index;
+            num = that;
+            init();
+        };
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环</title>
+</head>
+<body>
+
+<button>按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+
+
+<script>
+    window.onload = function () {
+        var aBtn = document.getElementsByTagName('button');
+        var arrText = ['今天','明天','后天'];
+        for(var i=0;i<aBtn.length;i++){
+            // console.log(i);  // 0 1 2
+            aBtn[i].innerHTML = arrText[i];
+            function write(i) {
+//                alert(i);
+//                console.log(arrText[i]);
+//                aBtn[i].innerHTML = arrText[i];
+            }
+//            aBtn[i].onclick = write(i);
+
+            //console.log(i);// 0 1 2
+        };
+
+        
+    }
+</script>
+
+
+</body>
+</html>

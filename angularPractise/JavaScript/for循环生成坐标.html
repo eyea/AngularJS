@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环生成坐标</title>
+    <style>
+        input{
+            position: absolute;
+            width:50px;
+            height:50px;
+        }
+        p{
+            width:100%;
+            height:50px;
+        }
+    </style>
+</head>
+<body>
+
+
+<script>
+    window.onload = function () {
+        var aBtn = document.getElementsByTagName('input');
+        var str = '';
+
+        for(var i=0;i<100;i++){
+            str += '<input type="button" value='+(i+1)+'>';
+            if((i+1)%10 == 0){
+                str += '<p></p> ';
+            }
+        };
+
+        document.body.innerHTML = str;
+
+        for(var i=1;i<aBtn.length;i++){
+//            console.log(aBtn.length);
+            if(i%10 == 1){
+                aBtn[i].style.left = '10px';
+            }else{
+                aBtn[i-1].style.left =10+ i*60 + "px";
+            }
+        };
+
+
+    }
+</script>
+</body>
+</html>
